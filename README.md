@@ -1,3 +1,4 @@
+[![Cppcheck](https://github.com/shiva-s30/265460-EmbeddedC_Activity/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/shiva-s30/265460-EmbeddedC_Activity/actions/workflows/cppcheck.yml)
 # Temperature Controller 
 The project is about designing a temperature controller for the seat of a car using a Atmega328 Microcontroller that contains the following modules
  - Button Sensor to check if person is seated or not
