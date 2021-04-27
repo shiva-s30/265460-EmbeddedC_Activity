@@ -1,9 +1,10 @@
-PROJ_NAME = Temperature sensor
+PROJ_NAME = Temperature Controller
 
 BUILD_DIR = Build
 
 # All Source code files
 SRC = activity_main.c\
+src/led_state.c\
 
 # All header file paths
 INC = -I inc
@@ -13,7 +14,7 @@ ifdef OS	# All configurations for Windwos OS
 # Correct the path based on OS
    FixPath = $(subst /,\,$1)
 # Name of the compiler used
-   CC = avr -gcc.exe
+   CC = avr-gcc.exe
 # Name of the elf to hex file converter used
    AVR_OBJ_CPY = avr-objcopy.exe
 else #All configurations for Linux OS
@@ -21,7 +22,7 @@ else #All configurations for Linux OS
 # Correct the path based on OS
       FixPath = $1				
 # Name of the compiler used
-	  CC = avr -gcc
+	  CC = avr-gcc
 # Name of the elf to hex file converter used
 	  AVR_OBJ_CPY = avr-objcopy 
    endif
