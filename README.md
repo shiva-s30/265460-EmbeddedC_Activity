@@ -1,6 +1,6 @@
 | [![Compile-Linux](https://github.com/shiva-s30/265460-EmbeddedC_Activity/actions/workflows/compile.yml/badge.svg)](https://github.com/shiva-s30/265460-EmbeddedC_Activity/actions/workflows/compile.yml)|  [![Cppcheck](https://github.com/shiva-s30/265460-EmbeddedC_Activity/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/shiva-s30/265460-EmbeddedC_Activity/actions/workflows/cppcheck.yml) | [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e9a16ec0f16d4b4db1f4d2f36f2868ec)](https://www.codacy.com/gh/shiva-s30/265460-EmbeddedC_Activity/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=shiva-s30/265460-EmbeddedC_Activity&amp;utm_campaign=Badge_Grade)|
 |-|-|-|
-# Temperature Controller 
+# Embedded C Activity - Temperature Controller 
 The project is about designing a temperature controller for the seat of a car using a Atmega328 Microcontroller that contains the following modules
 - Button Sensor to check if person is seated or not
 - Temperature Sensor to measure the temperature of the seat
