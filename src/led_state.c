@@ -15,7 +15,7 @@
  */
 
 #include <avr/io.h>
-#include "main.h"
+#include "led_state.h"
 
 /**
  * @brief Function to set state of LED for a port
@@ -23,7 +23,14 @@
  * @param[in] state
  *
  */
+
+ void led_init()
+ {
+     DDRB &= ~(1 << DDB6);
+     DDRB &= ~(1 << DDB7);
+     DDRB |= (1 << DDB0);
+ }
 void led_state (uint8_t state)
 {
-    LED_PORT = (state << LED_PIN);
+    LED_PORT |= (state << LED_PIN);
 }
