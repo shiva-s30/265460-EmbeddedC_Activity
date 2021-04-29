@@ -26,8 +26,11 @@
 /**
  * Macro Definitions
  */
-#define button_sensor DDB0
+#define F_CPU 16000000UL
+
+#define button_sensor DDB1
 #define heater DDB2
+#define led_out DDB0
 #define set_state(x) (1 << x)
 
 
