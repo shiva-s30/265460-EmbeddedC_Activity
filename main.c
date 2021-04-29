@@ -16,7 +16,6 @@
 
 #include "main.h"
 
-
 int main(void)
 {
     led_init();
