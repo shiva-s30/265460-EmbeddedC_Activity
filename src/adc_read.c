@@ -15,7 +15,7 @@
  */
 
 #include <avr/io.h>
-#include "main.h"
+#include "adc_read.h"
 
 void adc_init()
 {
