@@ -22,8 +22,10 @@ int main(void)
     led_init();
     adc_init();
     pwm_init();
+    uart_init(103);
 
     uint16_t temp_value = 0;
+    char temp;
 
 
     while(1)
@@ -32,7 +34,8 @@ int main(void)
                         {
                             led_state(LED_ON);
                             temp_value = adc_read(3);
-                            pwm_waveform(temp_value);
+                            temp = pwm_waveform(temp_value);
+                            uart_write(temp);
                         }
             else
             {
