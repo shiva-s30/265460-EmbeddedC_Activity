@@ -31,6 +31,10 @@
 #define LED_PORT (PORTB)
 #define LED_PIN  (PORTB0)
 
+#define BUTTON_SENSOR_SET (PINB&(1<<PB6))
+#define HEATER_SET (PINB&(1<<PB7))
+
+void led_init();
 void led_state (uint8_t state);
 
 #endif
