@@ -3,10 +3,11 @@ PROJ_NAME = Temperature Controller
 BUILD_DIR = Build
 
 # All Source code files
-SRC = activity_main.c\
+SRC = main.c\
 src/led_state.c\
 src/adc_read.c\
 src/pwm_waveform.c\
+src/uart.c\
 
 # All header file paths
 INC = -I inc
