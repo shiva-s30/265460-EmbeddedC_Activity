@@ -8,3 +8,7 @@ The project is about designing a temperature controller for the seat of a car us
 - Led Actuator to verify if the person has seated and heater has been turned ON
 - Display CDD to provide the value of temperature by showing a PWM
 - Heat Controller module (Atmega328 Microcontroller) 
+## Activity Result
+![Screenshot (129)](https://user-images.githubusercontent.com/65439506/116605122-a2de0500-a94c-11eb-9a44-3c86ced5fdc8.png)
+
+
