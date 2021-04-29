@@ -24,31 +24,38 @@ void pwm_init()
     DDRB |= (1 << PB1);
 }
 
-void pwm_waveform(uint16_t adc_value)
+char pwm_waveform(uint16_t adc_value)
 {
+    char t_value;
     if(adc_value >= 0 && adc_value < 210)
     {
         OCR1A = 0x0CD; //20% Duty Cycle (0.20 * 1023 = 205)
+        t_value = 20;
         _delay_ms(50);
     }
     else if (adc_value >= 210 && adc_value < 510)
     {
         OCR1A = 0x19A; //40% Duty Cycle (0.40 * 1023 = 410)
+        t_value = 25;
         _delay_ms(50);
     }
     else if (adc_value >= 510 && adc_value < 710)
     {
         OCR1A = 0x2CC; //70% Duty Cycle (0.70 * 1023 =  716)
+        t_value = 29;
         _delay_ms(50);
     }
     else if (adc_value >= 710 && adc_value < 1024)
     {
         OCR1A = 0x3CC; //95% Duty Cycle (0.95 * 1023 = 972)
+        t_value = 33;
         _delay_ms(50);
     }
     else
     {
         OCR1A = 0;
+        t_value = 0;
     }
+    return t_value;
 
 }
