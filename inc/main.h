@@ -21,17 +21,14 @@
 #include <util/delay.h>
 
 #include "led_state.h"
-
+#include "adc_read.h"
+#include "pwm_waveform.h"
+#include "uart.h"
 
 /**
  * Macro Definitions
  */
 #define F_CPU 16000000UL
-
-#define button_sensor DDB1
-#define heater DDB2
-#define led_out DDB0
-#define set_state(x) (1 << x)
 
 
 #endif
