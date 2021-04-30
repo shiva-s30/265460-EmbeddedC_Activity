@@ -17,6 +17,10 @@
 #include <avr/io.h>
 #include "pwm_waveform.h"
 
+/**
+* Peripheral Initialization
+*/
+
 void pwm_init()
 {
     TCCR1A |= (1 << COM1A1) |  (1 << WGM11) | (1 << WGM10);
@@ -24,9 +28,17 @@ void pwm_init()
     DDRB |= (1 << PB1);
 }
 
-char pwm_waveform(uint16_t adc_value)
+ /**
+ * @brief Function to return temperature value for a given range of ADC Value
+ * @param[in] adc_value
+ *
+ */
+int pwm_waveform(uint16_t adc_value)
 {
-    char t_value;
+    int t_value = 0;
+
+    /*Based on the condition, the OCR1A register is used to set the duty cycle*/
+
     if(adc_value >= 0 && adc_value < 210)
     {
         OCR1A = 0x0CD; //20% Duty Cycle (0.20 * 1023 = 205)
