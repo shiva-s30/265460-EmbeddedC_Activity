@@ -25,14 +25,18 @@
  */
 
 
-#define LED_ON (0x01)
-#define LED_OFF (0x00)
+#define ON_STATE  (0b00000001)
+#define OFF_STATE (0b00000000)
 
-#define LED_PORT (PORTB)
-#define LED_PIN  (PORTB0)
+#define PORT_SET (PORTB)
+#define PIN_SET  (PORTB0)
 
 #define BUTTON_SENSOR_SET (PINB&(1<<PB6))
 #define HEATER_SET (PINB&(1<<PB7))
+
+/**
+ * Function Declarations
+ */
 
 void led_init();
 void led_state (uint8_t state);
