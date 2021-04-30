@@ -18,7 +18,11 @@
 
 #include "main.h"
 
+/**
+ * Function Declarations
+ */
+
 void pwm_init();
-char pwm_waveform(uint16_t adc_value);
+int pwm_waveform(uint16_t adc_value);
 
 #endif
