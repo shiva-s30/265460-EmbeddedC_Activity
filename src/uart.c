@@ -17,6 +17,10 @@
 #include <avr/io.h>
 #include "uart.h"
 
+/**
+* Peripheral Initialization
+*/
+
 void uart_init(uint16_t ubbr_value)
 {
     //Setting Baud Rate
@@ -27,7 +31,13 @@ void uart_init(uint16_t ubbr_value)
     UCSR0B = (1 << RXEN0) | (1 << TXEN0) | (1<<RXCIE0)| (1 << TXCIE0);
 }
 
-void uart_write(char data)
+ /**
+ * @brief Function to write value of temperature to a port
+ *
+ * @param[in] data
+ *
+ */
+void uart_write(int data)
 {
     while(!(UCSR0A & (1<<UDRE0)))
     {
