@@ -18,19 +18,24 @@
 #include "led_state.h"
 
 /**
- * @brief Function to set state of LED for a port
- *
- * @param[in] state
- *
- */
+* Peripheral Initialization
+*/
 
  void led_init()
  {
-     DDRB &= ~(1 << DDB6);
-     DDRB &= ~(1 << DDB7);
-     DDRB |= (1 << DDB0);
+     DDRB &= ~(1 << DDB6); //Setting PINB6 as input pin
+     DDRB &= ~(1 << DDB7); //Setting PINB7 as input pin
+     DDRB |= (1 << DDB0);  //Setting PINB0 as output pin
  }
-void led_state (uint8_t state)
+
+ /**
+ * @brief Function to set value of LED for a port
+ *
+ * @param[in] value
+ *
+ */
+
+void led_state (uint8_t value)
 {
-    LED_PORT |= (state << LED_PIN);
+    PORT_SET |= (value << PIN_SET);
 }
