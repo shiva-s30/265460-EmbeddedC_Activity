@@ -18,9 +18,11 @@
 
 #include "main.h"
 
+/**
+ * Function Declarations
+ */
+
 void uart_init(uint16_t ubbr_value);
-void uart_write(char data);
-
-
+void uart_write(int data);
 
 #endif
